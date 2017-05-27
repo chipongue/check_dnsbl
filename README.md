@@ -6,14 +6,20 @@ Typically, messages sent by servers in blacklists are strongly rejected or marke
 This Nagios plugin monitors blacklists in search of a past IP address as an argument. By default, the plugin searches in 27 of the most popular blacklists, and can optionally be added to other lists, or ignored the set of predefined blacklists. This plugin signals the presence of the server IP address on at least one of the blacklists with the critical state.
 
 Mandatory arguments: The following argument must be specified when the module is executed:
--H or – hostaddress used to specify e-mail address to send.
+
+-H or --hostaddress used to specify e-mail address to send.
 
 Optional arguments: The following arguments are optionally invoked, as required by the user:
--l or – list used to specify one or a set of blacklists.
--i or – ignore used to skip the blacklist pre installed. -I or – ignore, used to specify one or more black lists to be ignored.
--V or – version used to query the module version.
--A or – author used to query the author's data.
+
+-l or --list used to specify one or a set of blacklists.
+
+-i or --ignore used to skip the blacklist pre installed. -I or – ignore, used to specify one or more black lists to be ignored.
+
+-V or --version used to query the module version.
+
+-A or --author used to query the author's data.
 
 Command-Line Execution Example:
+
 ./check_dnsbl.py -H 198.224.42.133 -l zem.spamhaus.org,spam.abuse.ch
 
